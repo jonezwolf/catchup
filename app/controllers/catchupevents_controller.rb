@@ -4,6 +4,6 @@ class CatchupeventsController < ApplicationController
   end
 
   def show
-    @catchupevent = CatchUpEvent.find(params[:id])
+    # @catchupevent = CatchUpEvent.find(params[:id])
   end
 end

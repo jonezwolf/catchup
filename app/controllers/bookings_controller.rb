@@ -1,14 +1,21 @@
 class BookingsController < ApplicationController
   before_action :set_catchupevent
 
+  def index
+    @bookings = Booking.all
+    authorize @bookings
+  end
+
   def new
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
     booking = Booking.new(booking_params)
     booking.catchupevent = @catchupevent
     if booking.save
+      authorize booking
       redirect_to my_bookings_path
     else
       render :new

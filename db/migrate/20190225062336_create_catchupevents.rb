@@ -5,8 +5,8 @@ class CreateCatchupevents < ActiveRecord::Migration[5.2]
       t.string :location
       t.string :category
       t.integer :capacity
-      t.date :start_time
-      t.date :end_time
+      t.datetime :start_time
+      t.datetime :end_time
       t.string :photo
       t.string :latitude
       t.string :longitude

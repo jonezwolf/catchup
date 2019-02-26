@@ -1,9 +1,8 @@
 class BookingsController < ApplicationController
-  before_action :set_catchupevent
+  before_action :set_catchupevent, only: [ :new, :create ]
 
   def index
-    @bookings = Booking.all
-    authorize @bookings
+    @bookings = policy_scope(Booking)
   end
 
   def new
@@ -25,7 +24,7 @@ class BookingsController < ApplicationController
   private
 
   def set_catchupevent
-    @catchupevent = CatchUpEvent.find(params[:id])
+    @catchupevent = Catchupevent.find(params[:catchupevent_id])
   end
 
   def booking_params

@@ -1,1 +1,28 @@
-hello
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Melbourne_Skyline_and_Princes_Bridge_-_Dec_2008.jpg/1200px-Melbourne_Skyline_and_Princes_Bridge_-_Dec_2008.jpg' %>');">
+  <div class="banner-content">
+    <h1>CatchUps near you</h1>
+  <form>
+    <input type="text" placeholder="Search CatchUps...">
+    <input type="submit" value="Go">
+  </form>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+  <div class="row">
+    <% @catchupevents.each do |catchupevent| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://nycdatascience.com/blog/wp-content/uploads/2018/03/picture.jpg');">
+          <div class="card-description">
+            <h4><%= catchupevent.name %></h4>
+            <p><%= catchupevent.category %></p>
+            <%= link_to catchupevent_path(catchupevent) do %>
+              <i class="fas fa-plus-circle"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+</div>

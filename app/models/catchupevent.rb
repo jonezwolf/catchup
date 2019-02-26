@@ -17,6 +17,7 @@ class Catchupevent < ApplicationRecord
   end
 
   def start_must_be_in_the_future
-    errors.add(:start_time, "must be in the future") if Date.now >= start_time
+    errors.add(:start_time, "must be in the future") if DateTime.now >= start_time
   end
 end
+

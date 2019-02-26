@@ -1,0 +1,37 @@
+
+<head>
+  <meta charset="utf-8">
+  <title>Catchup</title>
+
+
+</head>
+
+
+<body>
+<div>
+  <h1>Name of Event</h1>
+  <p>~Hosted by CatchUps</p>
+</div>
+
+<div>
+  <p><strong>Category:</strong><%= %></p>
+  <p><strong>Location:</strong><%= %></p>
+  <p><strong>Duration:</strong><%= %></p>
+  <p><strong>Capacity:</strong><%= %></p>
+  <p>Add photo</p>
+</div>
+
+<div>
+  <%= link_to "Book now",  new_catchupevent_booking_path, class: "btn btn-flat" %>
+</div>
+
+<div>
+  <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quisquam provident debitis modi, sed labore porro sit maxime tempore possimus eligendi praesentium obcaecati impedit voluptate quidem laudantium iure reprehenderit natus.</p>
+</div>
+
+<div>
+  <p><strong>Location on Map</strong></p>
+  <img src="/assets/images/static_map.jpg" alt="Location of the Event on Google Maps">
+</div>
+
+</body>

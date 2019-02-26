@@ -1,1 +1,9 @@
-hello
+<h1> Hello! </h1>
+<h2>Test</h2>
+<%= user_signed_in? %>
+<%= current_user.id %>
+
+<%= simple_form_for [@catchupevent, @booking] do |f| %>
+  <%= f.input :number_of_guests %>
+  <%= f.button :submit %>
+<% end %>

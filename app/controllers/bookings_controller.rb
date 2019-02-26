@@ -14,6 +14,7 @@ class BookingsController < ApplicationController
     booking = Booking.new(booking_params)
     authorize booking
     booking.catchupevent = @catchupevent
+    booking.user_id = current_user.id
     if booking.save
       redirect_to my_bookings_path
     else

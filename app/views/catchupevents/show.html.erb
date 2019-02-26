@@ -1,1 +1,52 @@
-hello
+<head>
+  <title>Catchup</title>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+   <div class="container-fluid" id= "div-1">
+    <h1><%= @catchupevent.name %></h1>
+    <p>~Hosted by Catchup</p>
+  </div>
+
+  <div class="container-fluid" id="div-2">
+    <table>
+      <tr>
+        <th id="row1">
+          <p><strong>Category:</strong> <%=@catchupevent.category %></p>
+          <p><strong>Location:</strong> <%=@catchupevent.location %></p>
+          <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
+          <% @end = @catchupevent.end_time.strftime('%H:%M') %>
+          <p><strong>Duration:</strong> <%=@start%> - <%=@end%></p>
+          <p><strong>Capacity:</strong> <%= @catchupevent.capacity%></p>
+        </th>
+        <th id="row2"> Add Photo </th>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container-fluid" id="div-3">
+    <button type="button" class="btn btn-primary btn-lg btn-block" id= "thick-button">Book Now<%#= link_to "Book Now", new_catchupevent_booking_path %></button>
+  </div>
+
+  <div class="container-fluid" id="div-4" >
+    <table>
+      <tr>
+        <th id= "row3">
+          <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quisquam provident debitis modi, sed labore porro sit maxime tempore possimus eligendi praesentium obcaecati impedit voluptate quidem laudantium iure reprehenderit natus.</p>
+        </th>
+        <th id= "row4">
+          <p><strong>Location on Map</strong></p>
+    <%= image_tag("static_map.jpg") %>
+        </th>
+      </tr>
+    </table>
+  </div>
+</body>

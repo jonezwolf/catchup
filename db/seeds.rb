@@ -12,6 +12,12 @@ test_booking = Booking.create(
   catchupevent_id: 1
   )
 
+test_booking2 = Booking.create(
+  number_of_guests: 4,
+  user_id: 2,
+  catchupevent_id: 2
+  )
+
 Jonas = User.create(
   first_name: 'Jonas',
   email: 'jonasjaping@gmail.com',
@@ -29,7 +35,7 @@ UXdesign = Catchupevent.create(
   )
 
 ThinkBig = Catchupevent.create(
-  user_id: 1,
+  user_id: 2,
   name: 'thinkbig',
   location: 'Southbank',
   start_time: DateTime.new(2019,3,1,17,0,0),

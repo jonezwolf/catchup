@@ -33,7 +33,7 @@
   </div>
 
   <div class="container-fluid" id="div-3">
-    <button type="button" class="btn btn-primary btn-lg btn-block" id= "thick-button"><%= link_to "Book Now", new_catchupevent_booking_path(@catchupevent.id) %></button>
+    <%= link_to "Book Now", new_catchupevent_booking_path(@catchupevent.id), class: "btn btn-primary btn-lg btn-block" %>
   </div>
 
   <div class="container-fluid" id="div-4" >

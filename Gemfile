@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.2.2'
 gem 'redis'
 gem 'pundit'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Devise Gem
 gem 'devise'

@@ -39,14 +39,13 @@ test_booking2 = Booking.create(
 puts "Creating some Catchup events!"
 
 ux_design = Catchupevent.create(
-  user_id: 1,
+  user_id: 4,
   name: 'UXdesign',
   location: 'Richmond',
-  start_time: DateTime.new(2019,2,27,18,0,0),
-  end_time: DateTime.new(2019,2,27,20,0,0),
+  start_time: DateTime.new(2019,3,1,18,0,0),
+  end_time: DateTime.new(2019,3,1,20,0,0),
   capacity: 50,
-  category: 'design',
-  photo: 'uxphoto.jpg'
+  category: 'design'
   )
 
 think_big = Catchupevent.create(
@@ -57,7 +56,7 @@ think_big = Catchupevent.create(
   end_time: DateTime.new(2019,3,1,19,0,0),
   capacity: 30,
   category: 'business',
-  photo: 'thinkbig.png'
+  # photo: 'thinkbig.png'
   )
 
 go_entrepreneurs = Catchupevent.create(
@@ -68,7 +67,7 @@ go_entrepreneurs = Catchupevent.create(
   end_time: DateTime.new(2019,2,28,19,0,0),
   capacity: 40,
   category: 'entrepreneurship',
-  photo: 'startup.png'
+  # photo: 'startup.png'
   )
 
 manage_daily = Catchupevent.create(
@@ -79,7 +78,7 @@ manage_daily = Catchupevent.create(
   end_time: DateTime.new(2019,3,1,20,0,0),
   capacity: 40,
   category: 'business',
-  photo: 'Daily-Management-PDCA.jpg'
+  # photo: 'Daily-Management-PDCA.jpg'
   )
 
 spiritual_mind = Catchupevent.create(
@@ -90,6 +89,6 @@ spiritual_mind = Catchupevent.create(
   end_time: DateTime.new(2019,2,28,19,0,0),
   capacity: 40,
   category: 'meditation',
-  photo: 'mindbodyspirit.jpg'
+  # photo: 'mindbodyspirit.jpg'
   )
 puts "finished"

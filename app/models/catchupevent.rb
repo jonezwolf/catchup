@@ -9,16 +9,16 @@ class Catchupevent < ApplicationRecord
   validates :capacity, presence: true, inclusion: { in: (1..50), allow_nil: false }
   validates :category, presence: true
 
-  validate :end_must_be_after_start
-  validate :start_must_be_in_the_future
+  # validate :end_must_be_after_start
+  # validate :start_must_be_in_the_future
 
-  def end_must_be_after_start
-    errors.add(:end_time, "must be after start time") if start_time >= end_time
-  end
+  # def end_must_be_after_start
+  #   errors.add(:end_time, "must be after start time") if start_time >= end_time
+  # end
 
-  def start_must_be_in_the_future
-    errors.add(:start_time, "must be in the future") if DateTime.now >= start_time
-  end
+  # def start_must_be_in_the_future
+  #   errors.add(:start_time, "must be in the future") if DateTime.now >= start_time
+  # end
 
   def duration
     ((self.end_time - self.start_time) / 3600).to_i

@@ -10,14 +10,18 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% unless controller_name == "pages" %>
-     <%= render 'shared/navbar' %>
-    <% end %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <% unless controller_name == "pages" %>
-      <%= render 'shared/footer' %>
-    <% end %>
+    <div class="site-content">
+      <% unless controller_name == "pages" %>
+       <%= render 'shared/navbar' %>
+      <% end %>
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+    </div>
+    <div class="site-footer">
+      <% unless controller_name == "pages" %>
+        <%= render 'shared/footer' %>
+      <% end %>
+    </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

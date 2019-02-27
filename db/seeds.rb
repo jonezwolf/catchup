@@ -6,16 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning DB"
-User.destroy_all
 Booking.destroy_all
 Catchupevent.destroy_all
+User.destroy_all
 
 puts "Creating two Users"
 jonas = User.create(
   first_name: 'Jonas',
   email: 'jonasjaping@gmail.com',
   password: '123456'
-  photo: 'jonas.jpg'
 )
 
 juan = User.create(

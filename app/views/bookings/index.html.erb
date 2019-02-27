@@ -1,24 +1,24 @@
-<div class="container">
+<div class="container" style="text-align: center">
+  <h1>My bookings</h1>
   <div class="row">
     <div class="col-sm-offset-2 col-sm-8">
     <% @bookings.each do |booking| %>
       <div class="card-booking">
-        <% @event = booking.catchupevent %>
-        <img src="<%= image_path @event.photo %>">
+        <% @catchupevent = booking.catchupevent %>
+        <img src="<%= image_path @catchupevent.photo %>">
           <div class="card-booking-infos">
-            <h4 style="background-color: lightgreen"><strong><%= @event.name %></strong></h4>
-            <p><strong>Location: </strong><%= @event.location %></p>
-            <p><strong>Category: </strong><%= @event.category %></p>
-            <p><strong>Capacity: </strong><%= @event.capacity %></p>
-            <p><strong>Start time: </strong><%= @event.start_time.strftime('%I:%M %p')%></p>
-            <p><strong>Duration: </strong><%= @event.duration %> Hours</p>
+            <h4 style="background-color: lightgreen"><strong><%= @catchupevent.name %></strong></h4>
+            <p><strong>Location: </strong><%= @catchupevent.location %></p>
+            <p><strong>Category: </strong><%= @catchupevent.category %></p>
+            <p><strong>Bookings already made: </strong><%= @catchupevent.bookings.count %></p>
+            <p><strong>Start time: </strong><%= @catchupevent.start_time.strftime('%I:%M %p')%></p>
+            <p><strong>Duration: </strong><%= @catchupevent.duration %> Hours</p>
         </div>
       </div>
     <% end %>
 
     </div>
   </div>
-  <%= link_to "Home", "catchupevents", class: "btn btn-gradient" %>
 </div>
 
 

@@ -6,16 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning DB"
-User.destroy_all
 Booking.destroy_all
 Catchupevent.destroy_all
+User.destroy_all
 
 puts "Creating two Users"
 jonas = User.create(
   first_name: 'Jonas',
   email: 'jonasjaping@gmail.com',
   password: '123456'
-  photo: 'jonas.jpg'
 )
 
 juan = User.create(
@@ -40,14 +39,13 @@ test_booking2 = Booking.create(
 puts "Creating some Catchup events!"
 
 ux_design = Catchupevent.create(
-  user_id: 1,
+  user_id: 4,
   name: 'UXdesign',
   location: 'Richmond',
-  start_time: DateTime.new(2019,2,27,18,0,0),
-  end_time: DateTime.new(2019,2,27,20,0,0),
+  start_time: DateTime.new(2019,3,1,18,0,0),
+  end_time: DateTime.new(2019,3,1,20,0,0),
   capacity: 50,
-  category: 'design',
-  photo: 'uxphoto.jpg'
+  category: 'design'
   )
 
 think_big = Catchupevent.create(
@@ -58,7 +56,7 @@ think_big = Catchupevent.create(
   end_time: DateTime.new(2019,3,1,19,0,0),
   capacity: 30,
   category: 'business',
-  photo: 'thinkbig.png'
+  # photo: 'thinkbig.png'
   )
 
 go_entrepreneurs = Catchupevent.create(
@@ -69,7 +67,7 @@ go_entrepreneurs = Catchupevent.create(
   end_time: DateTime.new(2019,2,28,19,0,0),
   capacity: 40,
   category: 'entrepreneurship',
-  photo: 'startup.png'
+  # photo: 'startup.png'
   )
 
 manage_daily = Catchupevent.create(
@@ -80,7 +78,7 @@ manage_daily = Catchupevent.create(
   end_time: DateTime.new(2019,3,1,20,0,0),
   capacity: 40,
   category: 'business',
-  photo: 'Daily-Management-PDCA.jpg'
+  # photo: 'Daily-Management-PDCA.jpg'
   )
 
 spiritual_mind = Catchupevent.create(
@@ -91,6 +89,6 @@ spiritual_mind = Catchupevent.create(
   end_time: DateTime.new(2019,2,28,19,0,0),
   capacity: 40,
   category: 'meditation',
-  photo: 'mindbodyspirit.jpg'
+  # photo: 'mindbodyspirit.jpg'
   )
 puts "finished"

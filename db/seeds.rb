@@ -5,36 +5,48 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Cleaning DB"
+User.destroy_all
+Booking.destroy_all
+Catchupevent.destroy_all
 
-test_booking = Booking.create(
-  number_of_guests: 2,
-  user_id: 1,
-  catchupevent_id: 1
-  )
-
-test_booking2 = Booking.create(
-  number_of_guests: 4,
-  user_id: 2,
-  catchupevent_id: 2
-  )
-
-Jonas = User.create(
+puts "Creating two Users"
+jonas = User.create(
   first_name: 'Jonas',
   email: 'jonasjaping@gmail.com',
   password: '123456'
 )
 
-UXdesign = Catchupevent.create(
-  user_id: 1,
-  name: 'uxdesign',
-  location: 'Richmond',
-  start_time: DateTime.new(2019,2,27,18,0,0),
-  end_time: DateTime.new(2019,2,27,20,0,0),
-  capacity: 50,
-  category: 'design'
+juan = User.create(
+  first_name: 'Juan',
+  email: 'juancarbe@gmail.com',
+  password: '123456'
+)
+
+puts "Creating two bookings"
+test_booking = Booking.create(
+  number_of_guests: 2,
+  user: jonas,
+  catchupevent_id: 1
   )
 
-ThinkBig = Catchupevent.create(
+test_booking2 = Booking.create(
+  number_of_guests: 4,
+  user: juan,
+  catchupevent_id: 2
+  )
+
+# UXdesign = Catchupevent.create(
+#   user_id: 1,
+#   name: 'uxdesign',
+#   location: 'Richmond',
+#   start_time: DateTime.new(2019,2,27,18,0,0),
+#   end_time: DateTime.new(2019,2,27,20,0,0),
+#   capacity: 50,
+#   category: 'design'
+#   )
+puts "Creating seom CatchupEvents"
+thinkBig = Catchupevent.create(
   user_id: 2,
   name: 'thinkbig',
   location: 'Southbank',
@@ -44,7 +56,7 @@ ThinkBig = Catchupevent.create(
   category: 'business'
   )
 
-GoEntrepreneurs = Catchupevent.create(
+go_entrepreneurs = Catchupevent.create(
   user_id: 1,
   name: 'goentrepreneurs',
   location: 'CBD',
@@ -54,7 +66,7 @@ GoEntrepreneurs = Catchupevent.create(
   category: 'entrepreneurship'
   )
 
-ManageDaily = Catchupevent.create(
+manage_daily = Catchupevent.create(
   user_id: 1,
   name: 'managedaily',
   location: 'CBD',
@@ -63,13 +75,13 @@ ManageDaily = Catchupevent.create(
   capacity: 40,
   category: 'business'
   )
-
-SpiritualMind = Catchupevent.create(
-  user_id: 1,
-  name: 'spiritualmind',
-  location: 'Richmond',
-  start_time: DateTime.new(2019,2,28,16,0,0),
-  end_time: DateTime.new(2019,2,28,19,0,0),
-  capacity: 40,
-  category: 'meditation'
-  )
+# SpiritualMind = Catchupevent.create(
+#   user_id: 1,
+#   name: 'spiritualmind',
+#   location: 'Richmond',
+#   start_time: DateTime.new(2019,2,28,16,0,0),
+#   end_time: DateTime.new(2019,2,28,19,0,0),
+#   capacity: 40,
+#   category: 'meditation'
+#   )
+puts "finished"

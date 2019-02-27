@@ -1,51 +1,92 @@
 #div-1 {
   text-align: center;
-  padding-top: 10px;
+  font-size: 20px;
+  padding-top: 50px;
+  width: 400px;
+  color: grey;
+}
+
+#div-1 h1{
+  font-size: 50px;
+  background-color: lightgreen;
+  color: white;
 }
 
 #div-2 {
-  padding: 25px 75px;
-  // margin: 10px;
+  padding: 0px;
+  margin: 0px;
+  // height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: grey;
 }
 
 #row1{
-  background-color: gray;
-  padding: 200px 220px;
+  // background-color: gray;
+  // padding: 20px 20px;
   border-radius: 3px;
+  width: 400px;
+  font-weight: lighter;
 }
 
 #row2{
-  background-color: black;
-  padding: 50px 300px;
+  // background-color: black;
+  // padding: 50px 300px;
   border-radius: 3px;
+  // width: 100px;
+}
+
+#row2 img {
+  width: 300px;
+  height: 200px;
 }
 
 #div-3 {
-  padding: 0px 75px;
+  // padding: 0px 75px;
+  margin-top: 20px;
+  width: 700px;
+  padding: 0px;
+
 }
 
 #thick-button {
-  padding: 30px;
-  text: bold;
+  // padding: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  height: 100px;
+
 }
 
 #div-4 {
-  padding: 25px 75px;
+  // padding: 25px 75px;
+   padding: 0px;
+  margin: 0px;
+
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: grey;
+  font-weight: lighter;
+
 }
 
 #row3 {
-  background-color: gray;
-  padding: 200px 220px;
+  // background-color: gray;
+  // padding: 200px 220px;
   border-radius: 3px;
-}
+  width: 700px;
+  // padding: 20px 20px;
+    font-weight: lighter;
+    text-align: justify;
+ }
 
-#row4 {
-  background-color: black;
-  padding: 50px 300px;
-  border-radius: 3px;
-}
 
-#row4 image_tag {
-  width: 40px;
-  height: 100px;
-}
+// .map_image {
+//   width: 40px;
+//   height: 40px;
+// }

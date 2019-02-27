@@ -27,24 +27,24 @@
           <p><strong>Duration:</strong> <%=@start%> - <%=@end%></p>
           <p><strong>Capacity:</strong> <%= @catchupevent.capacity%></p>
         </th>
-        <th id="row2"> Add Photo </th>
-      </tr>
+        <th id="row2">
+            <img src="<%= image_path @catchupevent.photo %>">
+        </th>
+        </tr>
     </table>
   </div>
 
   <div class="container-fluid" id="div-3">
-    <%= link_to "Book Now", new_catchupevent_booking_path(@catchupevent.id), class: "btn btn-primary btn-lg btn-block" %>
+
+   <%= link_to "Book now", new_catchupevent_booking_path(@catchupevent), class: "btn btn-danger btn-lg btn-block" %>
   </div>
+
 
   <div class="container-fluid" id="div-4" >
     <table>
       <tr>
         <th id= "row3">
           <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quisquam provident debitis modi, sed labore porro sit maxime tempore possimus eligendi praesentium obcaecati impedit voluptate quidem laudantium iure reprehenderit natus.</p>
-        </th>
-        <th id= "row4">
-          <p><strong>Location on Map</strong></p>
-    <%= image_tag("static_map.jpg") %>
         </th>
       </tr>
     </table>

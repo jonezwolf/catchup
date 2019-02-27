@@ -5,7 +5,6 @@
     <% @bookings.each do |booking| %>
       <div class="card-booking">
         <% @catchupevent = booking.catchupevent %>
-        <img src="<%= image_path @catchupevent.photo %>">
           <div class="card-booking-infos">
             <h4 style="background-color: lightgreen"><strong><%= @catchupevent.name %></strong></h4>
             <p><strong>Location: </strong><%= @catchupevent.location %></p>

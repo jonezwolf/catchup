@@ -12,7 +12,7 @@
   <div class="row">
     <% @catchupevents.each do |catchupevent| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path catchupevent.photo %>');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));">
           <div class="card-description">
           <h4 style="background-color: lightgreen">#<%= catchupevent.name %></h4>
           <p><%= catchupevent.category %></p>

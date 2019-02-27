@@ -1,6 +1,6 @@
 .card-booking {
   overflow: hidden;
-  height: 170px;
+  height: 180px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -11,7 +11,7 @@
 
 .card-booking img {
   height: 100%;
-  width: 120px;
+  width: 300px;
   object-fit: cover;
   position: absolute;
   right: 0px;
@@ -21,6 +21,10 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+}
+
+.card-booking h4 {
+  color: white;
 }
 
 .card-booking p {

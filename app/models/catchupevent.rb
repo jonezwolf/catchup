@@ -19,4 +19,9 @@ class Catchupevent < ApplicationRecord
   def start_must_be_in_the_future
     errors.add(:start_time, "must be in the future") if DateTime.now >= start_time
   end
+
+  def duration
+    ((self.end_time - self.start_time) / 3600).to_i
+  end
+
 end

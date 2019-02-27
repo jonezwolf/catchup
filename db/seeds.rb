@@ -15,7 +15,6 @@ jonas = User.create(
   first_name: 'Jonas',
   email: 'jonasjaping@gmail.com',
   password: '123456'
-  photo: 'jonas.jpg'
 )
 
 juan = User.create(

@@ -24,6 +24,12 @@ Jonas = User.create(
   password: '123456'
 )
 
+Juan = User.create(
+  first_name: 'Juan',
+  email: 'Juan@gmail.com',
+  password: '123456'
+)
+
 UXdesign = Catchupevent.create(
   user_id: 1,
   name: 'uxdesign',

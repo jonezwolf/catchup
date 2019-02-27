@@ -5,13 +5,13 @@
       <div class="card-booking">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
         <div class="card-booking-infos">
-          <% @event = Catchupevent.find(booking.catchupevent_id) %>
+          <% @event = booking.catchupevent %>
           <p><strong>Event: </strong><%= @event.name %></p>
           <p><strong>Location: </strong><%= @event.location %></p>
           <p><strong>Category: </strong><%= @event.category %></p>
           <p><strong>Capacity: </strong><%= @event.capacity %></p>
           <p><strong>Start time: </strong><%= @event.start_time.strftime('%I:%M %p')%></p>
-
+          <p><strong>Duration: </strong><%= @event.duration %> Hours</p>
         </div>
       </div>
     <% end %>

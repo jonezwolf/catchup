@@ -12,13 +12,12 @@
   <div class="row">
     <% @catchupevents.each do |catchupevent| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://nycdatascience.com/blog/wp-content/uploads/2018/03/picture.jpg');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path catchupevent.photo %>');">
           <div class="card-description">
-            <h4><%= catchupevent.name %></h4>
-            <p><%= catchupevent.category %></p>
-            <%= link_to catchupevent_path(catchupevent) do %>
-              <i class="fas fa-plus-circle"></i>
-            <% end %>
+          <h4 style="background-color: lightgreen">#<%= catchupevent.name %></h4>
+          <p><%= catchupevent.category %></p>
+          <%= link_to "See details", catchupevent_path(catchupevent), class: "btn-sm btn-primary" %>
+          <%= link_to "Book now", new_catchupevent_booking_path(catchupevent), class: "btn-sm btn-danger" %>
           </div>
         </div>
       </div>

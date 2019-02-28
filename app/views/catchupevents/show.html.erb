@@ -16,13 +16,13 @@
 <body>
 
   <div class="container-fluid">
+    <div class="card-category">
+      <div id= "div-1">
+       <h1><%= @catchupevent.name %></h1>
+       <p>~Hosted by CatchUp</p>
+     </div>
 
-    <div class="container-fluid" id= "div-1">
-      <h1><%= @catchupevent.name %></h1>
-      <p>~Hosted by Catchup</p>
-    </div>
-
-    <div class="container-fluid" id="div-2">
+     <div id="div-2">
       <table>
         <tr>
           <th id="row1">
@@ -35,18 +35,19 @@
             <p><strong>Currently booked:</strong> <%= @total_guests %>/<%= @catchupevent.capacity %></p>
           </th>
           <th id="row2">
+            <%= image_tag @catchupevent.photo %>
           </th>
         </tr>
       </table>
     </div>
 
-    <div class="container-fluid" id="div-3">
+    <div id="div-3">
 
-     <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), :class => 'btn btn-red' %>
+     <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), class: "btn btn-green btn-lg btn-block"%>
 
     </div>
 
-    <div class="container-fluid" id="div-4" >
+    <div id="div-4" >
       <table>
         <tr>
           <th id= "row3">
@@ -55,5 +56,6 @@
         </tr>
       </table>
     </div>
+   </div>
 
 </body>

@@ -53,5 +53,13 @@
 .card-header {
   position: absolute;
   width: 100%;
-  top: 5px;
+  top: 0px;
+}
+
+.card-header p {
+  margin-top: 0px;
+}
+
+.card-header h4 {
+  margin-bottom: 0px;
 }

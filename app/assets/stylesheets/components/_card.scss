@@ -1,12 +1,13 @@
 .card-booking {
   overflow: hidden;
-  height: 180px;
+  height: 200px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin: 5px 0px;
   position: relative;
+  border-radius: 10px;
 }
 
 .card-booking img {
@@ -24,7 +25,7 @@
 }
 
 .card-booking h4 {
-  color: white;
+  color: $green;
 }
 
 .card-booking p {
@@ -38,5 +39,19 @@
 .card-booking-infos {
   padding: 16px;
   position: absolute;
-  // height: 120px;
+  top: 15px;
+  left: 0px;
+  text-align: left;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.card-header {
+  position: absolute;
+  width: 100%;
+  top: 5px;
 }

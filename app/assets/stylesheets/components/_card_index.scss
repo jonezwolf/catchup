@@ -20,12 +20,14 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
 }
 
-.card-catchup > img {
+.card-catchup-photo {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border: 0.5px solid lightgray;
 }
 
 .card-catchup h2 {
@@ -37,24 +39,27 @@
 .card-catchup p {
   font-size: 12px;
   opacity: .7;
-  margin: 0;
 }
 
 
-.card-catchup .card-catchup-infos {
+.card-catchup-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  border: 0.5px solid lightgray;
 }
 
-// .card-catchup-infos .card-catchup-host {
-//   position: absolute;
-//   right: 16px;
-//   top: -20px;
-//   width: 40px;
-// }
+
+.card-catchup-host {
+  position: absolute;
+  right: 16px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
 
 // .card-link {
 //   position: absolute;

@@ -12,19 +12,21 @@
   <div class="row">
     <% @catchupevents.each do |catchupevent| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card-catchup">
-          <div class="card-catchup-photo">
-            <%= cl_image_tag(catchupevent.photo,
-                  width: 270, height: 180, crop: :fill) %>
-            <%= link_to "", catchupevent_path(catchupevent) %>
-          </div>
-          <div class="card-catchup-infos">
-            <div>
-              <h2><%= catchupevent.name %></h2>
-              <p>#<%= catchupevent.category %></p>
+        <%= link_to catchupevent_path(catchupevent) do %>
+          <div class="card-catchup">
+            <div class="card-catchup-photo">
+              <%= cl_image_tag(catchupevent.photo,
+                    width: 269, height: 180, crop: :fill) %>
+            </div>
+            <div class="card-catchup-infos">
+              <div >
+                <h2><%= catchupevent.name %></h2>
+                <p>#<%= catchupevent.category %></p>
+              </div>
+              <%= cl_image_tag("bdqsk8ahengzzsxxx7ko", class: "card-catchup-host avatar-bordered") %>
             </div>
           </div>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>

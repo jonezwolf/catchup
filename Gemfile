@@ -15,6 +15,9 @@ gem 'devise'
 # Devise Cloudinary
 gem 'cloudinary', '~> 1.9.1'
 
+# Devise geocoding
+gem "geocoder"
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.5.0'

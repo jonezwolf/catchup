@@ -15,12 +15,19 @@
 //   // }
 // }
 
+.banner {
+  object-fit: cover;
+  height: 60%;
+  width: 100%;
+  background-position: center;
+}
 
 .card-catchup {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 30px;
+  color: gray;
 }
 
 .card-catchup-photo {
@@ -40,7 +47,6 @@
   font-size: 12px;
   opacity: .7;
 }
-
 
 .card-catchup-infos {
   padding: 16px;

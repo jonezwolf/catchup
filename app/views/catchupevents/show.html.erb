@@ -1,21 +1,4 @@
-<head>
-  <title>Catchup</title>
-   <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-
-    <!-- I DISABLED BOOTSTRAP HERE BECAUSE OF CONFLICTS WITH THE BUTTONS - JJ 28.02.2019 13:44 -->
-
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-
-</head>
-
-
-<body>
-
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="card-category">
       <div id= "div-1">
        <h1><%= @catchupevent.name %></h1>
@@ -23,39 +6,47 @@
      </div>
 
      <div id="div-2">
-      <table>
-        <tr>
-          <th id="row1">
-            <p><strong>Category:</strong> <%=@catchupevent.category %></p>
-            <p><strong>Location:</strong> <%=@catchupevent.location %></p>
-            <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
-            <% @end = @catchupevent.end_time.strftime('%H:%M') %>
-            <% @duration = (@catchupevent.end_time.to_i - @catchupevent.start_time.to_i) / 3600  %>
-            <p><strong>Time:</strong> <%=@start%> (<%= @duration %>h)</p>
-            <p><strong>Currently booked:</strong> <%= @total_guests %>/<%= @catchupevent.capacity %></p>
-          </th>
-          <th id="row2">
-            <%= image_tag @catchupevent.photo %>
-          </th>
-        </tr>
-      </table>
-    </div>
+  <table>
+    <tr>
+      <th id="row1">
+        <p><strong>Category:</strong> <%=@catchupevent.category %></p>
+        <p><strong>Location:</strong> <%=@catchupevent.location %></p>
+        <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
+        <% @end = @catchupevent.end_time.strftime('%H:%M') %>
+        <p><strong>Time:</strong> <%=@start%> (<%= @duration %>h)</p>
+        <p><strong>Currently booked:</strong> <%= @total_guests %>
+          / <%= @catchupevent.capacity %></p>
+      </th>
+      <th id="row2">
+                    <%= image_tag @catchupevent.photo %>
+      </th>
+    </tr>
+  </table>
+</div>
 
     <div id="div-3">
+    <% if @boolean == true %>
+      <p><em>You have already made a booking for this catchUp!</em></p>
+      <%= link_to "VIEW MY BOOKINGS", my_bookings_path, :class => 'btn btn-red btn-lg btn-block' %>
+    <% else %>
+      <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), :class => 'btn btn-green btn-lg btn-block' %>
+    <% end %>
+  </div>
 
-     <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), class: "btn btn-green btn-lg btn-block"%>
-
+<div id="div-4" >
+<!-- <div class="container"> -->
+  <div class="map-layout">
+    <div class="catchupevent-description">
+      <p>
+        <strong>Description:</strong> <%=@catchupevent.description %>
+      </p>
     </div>
-
-    <div id="div-4" >
-      <table>
-        <tr>
-          <th id= "row3">
-            <p><strong>Description:</strong> <%= @catchupevent.description %> </p>
-          </th>
-        </tr>
-      </table>
-    </div>
-   </div>
-
-</body>
+    <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+  </div>
+</div>

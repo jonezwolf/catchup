@@ -1,5 +1,4 @@
-
- <div class="container-fluid" id= "div-1">
+<div class="container-fluid" id= "div-1">
   <h1><%= @catchupevent.name %></h1>
   <p>~Hosted by Catchup</p>
 </div>
@@ -7,13 +6,14 @@
 <div class="container-fluid" id="div-2">
   <table>
     <tr>
-      <th id="row1">
+      <th id="row1">    
         <p><strong>Category:</strong> <%=@catchupevent.category %></p>
         <p><strong>Location:</strong> <%=@catchupevent.location %></p>
         <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
         <% @end = @catchupevent.end_time.strftime('%H:%M') %>
-        <p><strong>Duration:</strong> <%=@start%> - <%=@end%></p>
-        <p><strong>Capacity:</strong> <%= @catchupevent.capacity%></p>
+        <p><strong>Time:</strong> <%=@start%> (<%= @duration %>h)</p>
+        <p><strong>Currently booked:</strong> <%= @total_guests %>
+          / <%= @catchupevent.capacity %></p>
       </th>
       <th id="row2">
       </th>
@@ -22,8 +22,7 @@
 </div>
 
 <div class="container-fluid" id="div-3">
-
- <%= link_to "Book now", new_catchupevent_booking_path(@catchupevent), class: "btn btn-danger btn-lg btn-block" %>
+  <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), :class => 'btn btn-red' %>
 </div>
 <!-- <div class="container"> -->
   <div class="map-layout">

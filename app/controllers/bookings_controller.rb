@@ -3,6 +3,18 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = policy_scope(Booking)
+    # @catchupevents = Catchupevent.all
+
+    # bookings_of_all_catchupevents = []
+
+    # @catchupevents.map do |catchupevent|
+    #   catchupevent.bookings.each do |booking|
+    #     bookings_of_all_catchupevents << booking.number_of_guests
+    #   end
+    # end
+    # @total = bookings_of_all_catchupevents.reduce(:+)
+    # return @total
+
   end
 
   def new

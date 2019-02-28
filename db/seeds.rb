@@ -33,7 +33,8 @@ ux_design = Catchupevent.create!(
   end_time: DateTime.new(2019,3,1,20,0,0),
   capacity: 50,
   category: 'design',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309805/xpu2bi5mcd0huvhosrj5.jpg'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309805/xpu2bi5mcd0huvhosrj5.jpg',
+  description: "Many of our members are looking to move into UX from all sorts of different professions. In this session we will hear stories from about journeys into (or towards) a career in UX. If you would like to share your story, or know anyone else that might, please send the organiser a message."
   )
 
 puts "Created catchup"
@@ -46,7 +47,9 @@ think_big = Catchupevent.create!(
   end_time: DateTime.new(2019,3,1,19,0,0),
   capacity: 30,
   category: 'business',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309875/tofx3qxgluyrjfhzf0di.png'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309875/tofx3qxgluyrjfhzf0di.png',
+  description: 'Thinking Big is a supportive group consisting of very driven and successful individuals who like to Think Big.'
+
   )
 
 puts "Created catchup"
@@ -59,7 +62,8 @@ go_entrepreneurs = Catchupevent.create!(
   end_time: DateTime.new(2019,2,28,19,0,0),
   capacity: 40,
   category: 'entrepreneurship',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309393/bldz43z6lf1mwjoev2sm.jpg'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309393/bldz43z6lf1mwjoev2sm.jpg',
+  description: 'For people working in startups, lean (startup) coffee is a weekly 1-hour coffee that runs a mash-up of leancoffee.org with theleanstartup.com.'
   )
 
 puts "Created catchup"
@@ -72,7 +76,8 @@ manage_daily = Catchupevent.create!(
   end_time: DateTime.new(2019,3,1,20,0,0),
   capacity: 40,
   category: 'business',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309955/vtbmtcf4ojmndvyjia0z.jpg'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309955/vtbmtcf4ojmndvyjia0z.jpg',
+  description: "This is Melbourne's longest running and largest group of its type. Come to our meetings and develop your understanding of Management."
   )
 
 puts "Created catchup"
@@ -85,7 +90,8 @@ spiritual_mind = Catchupevent.create!(
   end_time: DateTime.new(2019,2,28,19,0,0),
   capacity: 40,
   category: 'meditation',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309729/qla9umh0vgccnhwj1pjr.jpg'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309729/qla9umh0vgccnhwj1pjr.jpg',
+  description: 'This is a group for anyone interested in the PRACTICAL APPLICATIONS of various Mind, Body and Spirit topics. I believe we are all on a journey of personal and spiritual growth in all areas of our lives, and this group caters for people who would like to evolve in the areas of mind, body and spirit.'
   )
 
 puts "Creating two bookings"

@@ -12,6 +12,8 @@
   // top: 0;
   width: 100%;
   z-index: 999;
+  position: relative;
+
 }
 
 /* Logo */
@@ -78,4 +80,11 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important;  /* 50% of your logo width */
+  display: block;
 }

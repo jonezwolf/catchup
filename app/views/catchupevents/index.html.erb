@@ -1,34 +1,35 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Melbourne_Skyline_and_Princes_Bridge_-_Dec_2008.jpg/1200px-Melbourne_Skyline_and_Princes_Bridge_-_Dec_2008.jpg' %>');">
   <div class="banner-content">
     <h1>CatchUps near you</h1>
-  <form>
-    <input type="text" placeholder="Search CatchUps...">
-    <input type="submit" value="Go">
+    <form>
+    <%= form_tag catchupevents_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find your next catchup"
+      %>
+    <% end %>
   </form>
   </div>
 </div>
 <div class="container">
   <div class="row">
-  <div class="row">
     <% @catchupevents.each do |catchupevent| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <%= link_to catchupevent_path(catchupevent) do %>
-          <div class="card-catchup">
-            <div class="card-catchup-photo">
-              <%= cl_image_tag(catchupevent.photo,
-                    width: 269, height: 180, crop: :fill) %>
-            </div>
-            <div class="card-catchup-infos">
-              <div >
-                <h2><%= catchupevent.name %></h2>
-                <p>#<%= catchupevent.category %></p>
-              </div>
-              <%= cl_image_tag("bdqsk8ahengzzsxxx7ko", class: "card-catchup-host avatar-bordered") %>
-            </div>
+
+        <div class="card-catchup">
+        <div class="card-catchup-photo">
+          <%= cl_image_tag(catchupevent.photo,
+                width: 270, height: 180, crop: :fill) %>
+          <%= link_to "", catchupevent_path(catchupevent) %>
+        </div>
+        <div class="card-catchup-infos">
+          <div>
+            <h2><%= catchupevent.name %></h2>
+            <p>#<%= catchupevent.category %></p>
           </div>
-        <% end %>
+        </div>
       </div>
     <% end %>
-  </div>
   </div>
 </div>

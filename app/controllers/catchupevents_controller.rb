@@ -24,9 +24,18 @@ class CatchupeventsController < ApplicationController
     count_bookings
     check_if_count_equals_zero
     duration_of_catchupevent
+    current_user_has_bookings?
   end
 
   # Other methods needed
+
+  def current_user_has_bookings?
+    current_user_bookings = current_user.bookings
+    current_user_bookings_catchupevent_ids = current_user_bookings.map do |booking|
+      booking.catchupevent_id
+    end
+    @boolean = current_user_bookings_catchupevent_ids.include? @catchupevent.id
+  end
 
   def duration_of_catchupevent
     @duration = (@catchupevent.end_time.to_i - @catchupevent.start_time.to_i) / 3600

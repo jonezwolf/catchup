@@ -39,14 +39,17 @@ test_booking2 = Booking.create(
 puts "Creating some Catchup events!"
 
 ux_design = Catchupevent.create(
-  user_id: 4,
+  user_id: 1,
   name: 'UXdesign',
   location: 'Richmond',
   start_time: DateTime.new(2019,3,1,18,0,0),
   end_time: DateTime.new(2019,3,1,20,0,0),
   capacity: 50,
-  category: 'design'
+  category: 'design',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309805/xpu2bi5mcd0huvhosrj5.jpg'
   )
+
+puts "Created catchup"
 
 think_big = Catchupevent.create(
   user_id: 1,
@@ -56,8 +59,10 @@ think_big = Catchupevent.create(
   end_time: DateTime.new(2019,3,1,19,0,0),
   capacity: 30,
   category: 'business',
-  # photo: 'thinkbig.png'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309875/tofx3qxgluyrjfhzf0di.png'
   )
+
+puts "Created catchup"
 
 go_entrepreneurs = Catchupevent.create(
   user_id: 1,
@@ -67,8 +72,10 @@ go_entrepreneurs = Catchupevent.create(
   end_time: DateTime.new(2019,2,28,19,0,0),
   capacity: 40,
   category: 'entrepreneurship',
-  # photo: 'startup.png'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309393/bldz43z6lf1mwjoev2sm.jpg'
   )
+
+puts "Created catchup"
 
 manage_daily = Catchupevent.create(
   user_id: 1,
@@ -78,8 +85,10 @@ manage_daily = Catchupevent.create(
   end_time: DateTime.new(2019,3,1,20,0,0),
   capacity: 40,
   category: 'business',
-  # photo: 'Daily-Management-PDCA.jpg'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309955/vtbmtcf4ojmndvyjia0z.jpg'
   )
+
+puts "Created catchup"
 
 spiritual_mind = Catchupevent.create(
   user_id: 1,
@@ -89,6 +98,9 @@ spiritual_mind = Catchupevent.create(
   end_time: DateTime.new(2019,2,28,19,0,0),
   capacity: 40,
   category: 'meditation',
-  # photo: 'mindbodyspirit.jpg'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309729/qla9umh0vgccnhwj1pjr.jpg'
   )
+
+puts "Created catchup"
+
 puts "finished"

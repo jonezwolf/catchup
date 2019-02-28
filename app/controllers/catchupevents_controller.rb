@@ -8,4 +8,5 @@ class CatchupeventsController < ApplicationController
     @catchupevent = Catchupevent.find(params[:id])
     authorize @catchupevent
   end
+
 end

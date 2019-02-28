@@ -56,6 +56,24 @@
       </table>
     </div>
 
+
+  <div class="container-fluid" id="div-3">
+
+   <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), class: "btn btn-danger btn-lg btn-block" %>
   </div>
+
+
+  <div class="container-fluid" id="div-4" >
+    <table>
+      <tr>
+        <th id= "row3">
+          <p><strong>Description:</strong> <%= @catchupevent.description %></p>
+        </th>
+      </tr>
+    </table>
+  </div>
+
+  </div>
+
 
 </body>

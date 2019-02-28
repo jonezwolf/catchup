@@ -14,8 +14,8 @@
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="card-catchup">
           <div class="card-catchup-photo">
-            <%= cl_image_tag catchupevent.photo,
-                  width: 270, height: 180, crop: :fill %>
+            <%= cl_image_tag(catchupevent.photo,
+                  width: 270, height: 180, crop: :fill) %>
             <%= link_to "", catchupevent_path(catchupevent) %>
           </div>
           <div class="card-catchup-infos">

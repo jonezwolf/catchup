@@ -11,35 +11,22 @@ Catchupevent.destroy_all
 User.destroy_all
 
 puts "Creating two Users"
-jonas = User.create(
+jonas = User.create!(
   first_name: 'Jonas',
   email: 'jonasjaping@gmail.com',
   password: '123456'
 )
 
-juan = User.create(
+juan = User.create!(
   first_name: 'Juan',
   email: 'Juan@gmail.com',
   password: '123456'
 )
 
-puts "Creating two bookings"
-test_booking = Booking.create(
-  number_of_guests: 2,
-  user: jonas,
-  catchupevent_id: 1
-  )
-
-test_booking2 = Booking.create(
-  number_of_guests: 4,
-  user: juan,
-  catchupevent_id: 2
-  )
-
 puts "Creating some Catchup events!"
 
-ux_design = Catchupevent.create(
-  user_id: 1,
+ux_design = Catchupevent.create!(
+  user: jonas,
   name: 'UXdesign',
   location: 'Richmond',
   start_time: DateTime.new(2019,3,1,18,0,0),
@@ -52,8 +39,8 @@ ux_design = Catchupevent.create(
 
 puts "Created catchup"
 
-think_big = Catchupevent.create(
-  user_id: 1,
+think_big = Catchupevent.create!(
+  user: jonas,
   name: 'ThinkBig',
   location: 'Southbank',
   start_time: DateTime.new(2019,3,1,17,0,0),
@@ -67,8 +54,8 @@ think_big = Catchupevent.create(
 
 puts "Created catchup"
 
-go_entrepreneurs = Catchupevent.create(
-  user_id: 1,
+go_entrepreneurs = Catchupevent.create!(
+  user: jonas,
   name: 'GoEntrepreneurs',
   location: 'CBD',
   start_time: DateTime.new(2019,2,28,17,0,0),
@@ -81,8 +68,8 @@ go_entrepreneurs = Catchupevent.create(
 
 puts "Created catchup"
 
-manage_daily = Catchupevent.create(
-  user_id: 1,
+manage_daily = Catchupevent.create!(
+  user: jonas,
   name: 'ManageDaily',
   location: 'CBD',
   start_time: DateTime.new(2019,3,1,18,0,0),
@@ -95,8 +82,8 @@ manage_daily = Catchupevent.create(
 
 puts "Created catchup"
 
-spiritual_mind = Catchupevent.create(
-  user_id: 1,
+spiritual_mind = Catchupevent.create!(
+  user: jonas,
   name: 'SpiritualMind',
   location: 'Richmond',
   start_time: DateTime.new(2019,2,28,16,0,0),
@@ -105,6 +92,19 @@ spiritual_mind = Catchupevent.create(
   category: 'meditation',
   photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309729/qla9umh0vgccnhwj1pjr.jpg',
   description: 'This is a group for anyone interested in the PRACTICAL APPLICATIONS of various Mind, Body and Spirit topics. I believe we are all on a journey of personal and spiritual growth in all areas of our lives, and this group caters for people who would like to evolve in the areas of mind, body and spirit.'
+  )
+
+puts "Creating two bookings"
+test_booking = Booking.create!(
+  number_of_guests: 2,
+  user: jonas,
+  catchupevent: spiritual_mind
+  )
+
+test_booking2 = Booking.create!(
+  number_of_guests: 4,
+  user: juan,
+  catchupevent: manage_daily
   )
 
 puts "Created catchup"

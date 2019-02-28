@@ -1,59 +1,42 @@
-<head>
-  <title>Catchup</title>
-   <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<div class="container-fluid" id= "div-1">
+  <h1><%= @catchupevent.name %></h1>
+  <p>~Hosted by Catchup</p>
+</div>
 
-    <!-- Bootstrap CSS -->
+<div class="container-fluid" id="div-2">
+  <table>
+    <tr>
+      <th id="row1">    
+        <p><strong>Category:</strong> <%=@catchupevent.category %></p>
+        <p><strong>Location:</strong> <%=@catchupevent.location %></p>
+        <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
+        <% @end = @catchupevent.end_time.strftime('%H:%M') %>
+        <p><strong>Time:</strong> <%=@start%> (<%= @duration %>h)</p>
+        <p><strong>Currently booked:</strong> <%= @total_guests %>
+          / <%= @catchupevent.capacity %></p>
+      </th>
+      <th id="row2">
+      </th>
+    </tr>
+  </table>
+</div>
 
-    <!-- I DISABLED BOOTSTRAP HERE BECAUSE OF CONFLICTS WITH THE BUTTONS - JJ 28.02.2019 13:44 -->
-
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-
-</head>
-
-
-<body>
-
-  <div class="container-fluid">
-
-    <div class="container-fluid" id= "div-1">
-      <h1><%= @catchupevent.name %></h1>
-      <p>~Hosted by Catchup</p>
+<div class="container-fluid" id="div-3">
+  <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), :class => 'btn btn-red' %>
+</div>
+<!-- <div class="container"> -->
+  <div class="map-layout">
+    <div class="catchupevent-description">
+      <p>
+        <strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quisquam provident debitis modi, sed labore porro sit maxime tempore possimus eligendi praesentium obcaecati impedit voluptate quidem laudantium iure reprehenderit natus.
+      </p>
     </div>
-
-    <div class="container-fluid" id="div-2">
-      <table>
-        <tr>
-          <th id="row1">
-            <p><strong>Category:</strong> <%=@catchupevent.category %></p>
-            <p><strong>Location:</strong> <%=@catchupevent.location %></p>
-            <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
-            <% @end = @catchupevent.end_time.strftime('%H:%M') %>
-            <p><strong>Time:</strong> <%=@start%> (<%= @duration %>h)</p>
-            <p><strong>Currently booked:</strong> <%= @total_guests %>
-              / <%= @catchupevent.capacity %></p>
-          </th>
-          <th id="row2">
-          </th>
-        </tr>
-      </table>
-    </div>
-
-    <div class="container-fluid" id="div-3">
-
-     <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), :class => 'btn btn-red' %>
-
-    </div>
-
-    <div class="container-fluid" id="div-4" >
-      <table>
-        <tr>
-          <th id= "row3">
-            <p><strong>Description:</strong> <%= @catchupevent.description %> </p>
-          </th>
-        </tr>
-      </table>
-    </div>
-
-</body>
+    <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+  </div>
+<!-- </div> -->

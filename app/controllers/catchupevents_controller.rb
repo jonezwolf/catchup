@@ -13,6 +13,14 @@ class CatchupeventsController < ApplicationController
   def show
     @catchupevent = Catchupevent.find(params[:id])
     authorize @catchupevent
+
+    @catchupevents = Catchupevent.where.not(latitude: nil, longitude: nil)
+
+    @markers = [{
+        lng: @catchupevent.longitude,
+        lat: @catchupevent.latitude
+    }]
+
     count_bookings
     check_if_count_equals_zero
     duration_of_catchupevent

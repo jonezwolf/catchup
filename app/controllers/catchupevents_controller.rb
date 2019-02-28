@@ -3,8 +3,10 @@ class CatchupeventsController < ApplicationController
     # @catchupevents = CatchUpEvent.all
     @catchupevents = policy_scope(Catchupevent)
     if params[:query].present?
-      sql_query = "name @@ :query OR location @@ :query OR category @@ :query"
-      @catchupevents = Catchupevent.where(sql_query, query: "%#{params[:query]}%")
+      # sql_query = "name @@ :query OR location @@ :query OR category @@ :query OR description @@ :query"
+      # sql_query = "concat_ws(' ', name, location, category, description) ILIKE :query"
+      @catchupevents = Catchupevent.where("concat_ws(' ', name, location, category, description) ILIKE ?", "%#{params[:query]}%")
+      # @catchupevents = Catchupevent.where(sql_query, query: "%#{params[:query]}%")
     else
       @catchupevents = policy_scope(Catchupevent)
     end

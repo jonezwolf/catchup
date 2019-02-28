@@ -16,7 +16,7 @@
   background-size: cover;
   background-position: center;
   background: white;
-  height: 550px;
+  height: 750px;
   margin-top: 20px;
 }
 
@@ -50,7 +50,7 @@
   font-size: 16px;
   color: grey;
   position: absolute;
-  bottom: 230px;
+  top: 100px;
 }
 
 #row1{
@@ -59,6 +59,8 @@
   border-radius: 3px;
   width: 400px;
   font-weight: lighter;
+  position: absolute;
+  left: 30px;
 }
 
 #row2{
@@ -66,6 +68,8 @@
   // padding: 50px 300px;
   border-radius: 3px;
   // width: 100px;
+    position: absolute;
+  right: 60px;
 }
 
 #row2 img {
@@ -83,7 +87,7 @@
 
 
   position: absolute;
-  bottom: 150px;
+  top: 350px;
   left: 0px;
 }
 
@@ -100,7 +104,7 @@
   // padding: 25px 75px;
   padding: 0px;
   margin: 0px;
-  width: 100%;
+  width: 90%;
   margin-top: 16px;
   display: flex;
   align-items: center;
@@ -108,19 +112,23 @@
   font-size: 16px;
   color: grey;
   font-weight: lighter;
+  top: 420px;
+  text-align: justify;
   position: absolute;
-  bottom: 20px;
+  left: 30px;
+
 }
 
-#row3 {
-  // background-color: gray;
-  // padding: 200px 220px;
-  border-radius: 3px;
-  width: 700px;
-  // padding: 20px 20px;
-    font-weight: lighter;
-    text-align: justify;
- }
+
+// #row3 {
+//   // background-color: gray;
+//   // padding: 200px 220px;
+//   border-radius: 3px;
+//   width: 700px;
+//   // padding: 20px 20px;
+//     font-weight: lighter;
+//     text-align: justify;
+//  }
 
 
 // .map_image {

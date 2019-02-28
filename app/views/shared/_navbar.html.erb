@@ -7,10 +7,10 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
+      <%= image_tag "just_title.png", height: 50, class: "title"%>
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= image_tag "just_title.png", height: 50, class: "title"%>
       <%= link_to "Home", catchupevents_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "MyBookings", my_bookings_path, class: "navbar-wagon-item navbar-wagon-link" %>
 

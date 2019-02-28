@@ -35,7 +35,7 @@
 
   <div class="container-fluid" id="div-3">
 
-   <%= link_to "Book now", new_catchupevent_booking_path(@catchupevent), class: "btn btn-danger btn-lg btn-block" %>
+   <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), class: "btn btn-danger btn-lg btn-block" %>
   </div>
 
 
@@ -43,7 +43,7 @@
     <table>
       <tr>
         <th id= "row3">
-          <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quisquam provident debitis modi, sed labore porro sit maxime tempore possimus eligendi praesentium obcaecati impedit voluptate quidem laudantium iure reprehenderit natus.</p>
+          <p><strong>Description:</strong> <%= @catchupevent.description %></p>
         </th>
       </tr>
     </table>

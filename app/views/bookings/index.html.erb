@@ -5,13 +5,18 @@
     <% @bookings.each do |booking| %>
       <div class="card-booking">
         <% @catchupevent = booking.catchupevent %>
+          <div class="card-header text-center">
+            <h4><strong><%= @catchupevent.name %></strong></h4>
+          </div>
           <div class="card-booking-infos">
-            <h4 style="background-color: lightgreen"><strong><%= @catchupevent.name %></strong></h4>
             <p><strong>Location: </strong><%= @catchupevent.location %></p>
             <p><strong>Category: </strong><%= @catchupevent.category %></p>
             <p><strong>Bookings already made: </strong><%= @catchupevent.bookings.count %></p>
             <p><strong>Start time: </strong><%= @catchupevent.start_time.strftime('%I:%M %p')%></p>
             <p><strong>Duration: </strong><%= @catchupevent.duration %> Hours</p>
+        </div>
+        <div class="card-btn">
+          <%= link_to "GET DETAILS", catchupevent_path(@catchupevent), class: "btn btn-green btn-lg btn-block" %>
         </div>
       </div>
     <% end %>

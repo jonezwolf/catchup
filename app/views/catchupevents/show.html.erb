@@ -30,9 +30,9 @@
             <p><strong>Location:</strong> <%=@catchupevent.location %></p>
             <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
             <% @end = @catchupevent.end_time.strftime('%H:%M') %>
-            <% @duration = (@catchupevent.end_time.to_i - @catchupevent.start_time.to_i) / 3600  %>
             <p><strong>Time:</strong> <%=@start%> (<%= @duration %>h)</p>
-            <p><strong>Currently booked:</strong> <%= @total_guests %>/<%= @catchupevent.capacity %></p>
+            <p><strong>Currently booked:</strong> <%= @total_guests %>
+              / <%= @catchupevent.capacity %></p>
           </th>
           <th id="row2">
           </th>

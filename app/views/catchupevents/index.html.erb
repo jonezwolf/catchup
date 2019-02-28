@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Melbourne_Skyline_and_Princes_Bridge_-_Dec_2008.jpg/1200px-Melbourne_Skyline_and_Princes_Bridge_-_Dec_2008.jpg' %>');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'https://res.cloudinary.com/giugoe/image/upload/v1551335049/s7ykth4j2b9254zko1e7.jpg' %>');">
   <div class="banner-content">
     <h1>CatchUps near you</h1>
     <form>
@@ -16,20 +16,21 @@
   <div class="row">
     <% @catchupevents.each do |catchupevent| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card-catchup">
-          <div class="card-catchup-photo">
-            <%= cl_image_tag(catchupevent.photo,
+        <%= link_to catchupevent_path(catchupevent) do %>
+          <div class="card-catchup">
+            <div class="card-catchup-photo">
+              <%= cl_image_tag(catchupevent.photo,
                   width: 270, height: 180, crop: :fill) %>
-            <%= link_to "", catchupevent_path(catchupevent) %>
-          </div>
-          <div class="card-catchup-infos">
-            <div>
-              <h2><%= catchupevent.name %></h2>
-              <p>#<%= catchupevent.category %></p>
             </div>
-            <%= cl_image_tag("just_logo", class: "card-catchup-host avatar-bordered") %>
+            <div class="card-catchup-infos">
+              <div>
+                <h2><%= catchupevent.name %></h2>
+                <p>#<%= catchupevent.category %></p>
+              </div>
+              <%= cl_image_tag("just_logo", class: "card-catchup-host avatar-bordered") %>
+            </div>
           </div>
-       </div>
+        <% end %>
       </div>
     <% end %>
   </div>

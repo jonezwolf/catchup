@@ -8,8 +8,8 @@ class CreateCatchupevents < ActiveRecord::Migration[5.2]
       t.datetime :start_time
       t.datetime :end_time
       t.string :photo
-      t.string :latitude
-      t.string :longitude
+      t.float :latitude
+      t.float :longitude
       t.references :user, foreign_key: true
 
       t.timestamps

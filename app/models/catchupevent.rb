@@ -9,6 +9,10 @@ class Catchupevent < ApplicationRecord
   validates :capacity, presence: true, inclusion: { in: (1..50), allow_nil: false }
   validates :category, presence: true
 
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
+
   # validate :end_must_be_after_start
   # validate :start_must_be_in_the_future
 

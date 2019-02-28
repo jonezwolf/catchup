@@ -1,0 +1,16 @@
+.map-layout {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .catchupevent-description {
+    flex: 0 0 60%;
+    padding: 0px 30px;
+  }
+
+  #map {
+    width: auto;
+
+  }
+}
+

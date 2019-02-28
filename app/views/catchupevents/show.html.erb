@@ -23,7 +23,8 @@
 
   <div class="container-fluid" id="div-3">
     <% if @boolean == true %>
-      <%= link_to "ALREADY BOOKED!", my_bookings_path, :class => 'btn btn-green' %>
+      <p><em>You have already made a booking for this catchUp!</em></p>
+      <%= link_to "VIEW MY BOOKINGS", my_bookings_path, :class => 'btn btn-green' %>
     <% else %>
       <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), :class => 'btn btn-red' %>
     <% end %>

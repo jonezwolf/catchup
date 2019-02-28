@@ -7,6 +7,7 @@
         <% @catchupevent = booking.catchupevent %>
           <div class="card-header text-center">
             <h4><strong><%= @catchupevent.name %></strong></h4>
+            <p><strong>Number of tickets: </strong><%= booking.number_of_guests %></p>
           </div>
           <div class="card-booking-infos">
             <p><strong>Location: </strong><%= @catchupevent.location %></p>

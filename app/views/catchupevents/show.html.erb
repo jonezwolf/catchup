@@ -30,7 +30,8 @@
             <p><strong>Location:</strong> <%=@catchupevent.location %></p>
             <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
             <% @end = @catchupevent.end_time.strftime('%H:%M') %>
-            <p><strong>Duration:</strong> <%=@start%> - <%=@end%></p>
+            <% @duration = (@catchupevent.end_time.to_i - @catchupevent.start_time.to_i) / 3600  %>
+            <p><strong>Time:</strong> <%=@start%> (<%= @duration %>h)</p>
             <p><strong>Currently booked:</strong> <%= @total_guests %>/<%= @catchupevent.capacity %></p>
           </th>
           <th id="row2">
@@ -45,35 +46,14 @@
 
     </div>
 
-
     <div class="container-fluid" id="div-4" >
       <table>
         <tr>
           <th id= "row3">
-            <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quisquam provident debitis modi, sed labore porro sit maxime tempore possimus eligendi praesentium obcaecati impedit voluptate quidem laudantium iure reprehenderit natus.</p>
+            <p><strong>Description:</strong> <%= @catchupevent.description %> </p>
           </th>
         </tr>
       </table>
     </div>
-
-
-  <div class="container-fluid" id="div-3">
-
-   <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), class: "btn btn-danger btn-lg btn-block" %>
-  </div>
-
-
-  <div class="container-fluid" id="div-4" >
-    <table>
-      <tr>
-        <th id= "row3">
-          <p><strong>Description:</strong> <%= @catchupevent.description %></p>
-        </th>
-      </tr>
-    </table>
-  </div>
-
-  </div>
-
 
 </body>

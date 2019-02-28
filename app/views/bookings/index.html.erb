@@ -19,8 +19,9 @@
 
               <% total_guests = total_guests.reduce(:+) %>
               <%= total_guests %>/<%= @catchupevent.capacity %></p>
-            <p><strong>Start time: </strong><%= @catchupevent.start_time.strftime('%I:%M %p')%></p>
-            <p><strong>Duration: </strong><%= @catchupevent.duration %> Hours</p>
+            <p><strong>Start time: </strong><%= @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M')%></p>
+            <% @duration = (@catchupevent.end_time.to_i - @catchupevent.start_time.to_i) / 3600  %>
+            <p><strong>Duration: </strong><%= @duration %> Hours</p>
         </div>
         <div class="card-btn">
           <%= link_to "GET DETAILS", catchupevent_path(@catchupevent), class: "btn btn-green btn-lg btn-block" %>

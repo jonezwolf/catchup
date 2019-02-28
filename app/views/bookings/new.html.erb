@@ -6,13 +6,17 @@
 <div class="container" style="text-align: center;width:  700px;padding: 50px 100px;">
   <div>
     <h1>Make a booking for</h1>
-    <h1><u><%= @catchupevent.name %></u></h1>btn btn-green
+    <h1><u><%= @catchupevent.name %></u></h1>
     <!-- <h2>Test</h2>
     <%= user_signed_in? %>
     <%= current_user.id %> -->
     <div style="padding-top: 25px">
       <div style="padding-bottom: 25px">
-        <p> Currently booked: <%= @total_guests %>/<%= @catchupevent.capacity %></p>
+        <p> Currently booked: <% if @total_guests == nil %>
+          <%= '0' %>
+          <% else %>
+          <%= @total_guests %>
+          <% end %>/ <%= @catchupevent.capacity %></p>
 
         <%= simple_form_for [@catchupevent, @booking] do |f| %>
           <%= f.input :number_of_guests, label: 'How many tickets would you like to book? :-)', collection: [1, 2, 3, 4, 5] %>

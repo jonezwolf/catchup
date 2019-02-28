@@ -14,13 +14,29 @@ class CatchupeventsController < ApplicationController
     @catchupevent = Catchupevent.find(params[:id])
     authorize @catchupevent
     count_bookings
+    check_if_count_equals_zero
+    duration_of_catchupevent
+  end
+
+  # Other methods needed
+
+  def duration_of_catchupevent
+    @duration = (@catchupevent.end_time.to_i - @catchupevent.start_time.to_i) / 3600
   end
 
   def count_bookings
     number_of_bookings = @catchupevent.bookings.map do |booking|
       booking.number_of_guests
     end
-    @total_guests = number_of_bookings.reduce(:+)
-    return @total_guests
+    @guests = number_of_bookings.reduce(:+)
+    return @guests
+  end
+
+  def check_if_count_equals_zero
+    if @guests.nil?
+      @total_guests = '0'
+    else
+      @total_guests = @guests
+    end
   end
 end

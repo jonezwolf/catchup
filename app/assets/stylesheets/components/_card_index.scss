@@ -1,19 +1,60 @@
-.card {
-  border: 1px solid lightgreen;
-  color: white;
-  text-align: center;
-  height: 200px;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 32px;
-  // .fas.fa-plus-circle {
-  //   z-index: 3;
-  //   position: relative;
-  // }
+// .card {
+//   border: 1px solid lightgreen;
+//   color: white;
+//   text-align: center;
+//   height: 200px;
+//   /* if you have a 70px navbar => height: calc(100vh - 70px); */
+//   background-size: cover !important;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-bottom: 32px;
+//   // .fas.fa-plus-circle {
+//   //   z-index: 3;
+//   //   position: relative;
+//   // }
+// }
+
+
+.card-catchup {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.card-catchup > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-catchup h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-catchup p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-catchup .card-catchup-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+// .card-catchup-infos .card-catchup-host {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }
 
 // .card-link {
 //   position: absolute;

@@ -6,7 +6,7 @@
 <div class="container" style="text-align: center;width:  700px;padding: 50px 100px;">
   <div>
     <h1>Make a booking for</h1>
-    <h1><u><%= @catchupevent.name %></u></h1>
+    <h1><u><%= @catchupevent.name %></u></h1>btn btn-green
     <!-- <h2>Test</h2>
     <%= user_signed_in? %>
     <%= current_user.id %> -->
@@ -17,7 +17,7 @@
         <%= simple_form_for [@catchupevent, @booking] do |f| %>
           <%= f.input :number_of_guests, label: 'How many tickets would you like to book? :-)', collection: [1, 2, 3, 4, 5] %>
 
-            <%= f.button :submit, class: "btn btn-success" %>
+            <%= f.button :submit, 'CREATE BOOKING!', class: "btn btn-green" %>
 
         <% end %>
       </div>
@@ -27,5 +27,5 @@
   </div>
 </div>
 <div style="margin-left: 50px">
-<%= link_to "Go back to details of #{@catchupevent.name}", catchupevent_path(@catchupevent), :class => 'btn btn-primary' %>
+<%= link_to "GO BACK TO #{@catchupevent.name.upcase}", catchupevent_path(@catchupevent), :class => 'btn btn-blue' %>
 </div>

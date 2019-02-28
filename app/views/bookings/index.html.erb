@@ -9,7 +9,14 @@
             <h4 style="background-color: lightgreen"><strong><%= @catchupevent.name %></strong></h4>
             <p><strong>Location: </strong><%= @catchupevent.location %></p>
             <p><strong>Category: </strong><%= @catchupevent.category %></p>
-            <p><strong>Bookings already made: </strong><%= @catchupevent.bookings.count %></p>
+            <p><strong>Current number of signups: </strong>
+              <% total_guests = [] %>
+              <% @catchupevent.bookings.each do |booking| %>
+                <% total_guests << booking.number_of_guests %>
+              <% end %>
+
+              <% total_guests = total_guests.reduce(:+) %>
+              <%= total_guests %>/<%= @catchupevent.capacity %></p>
             <p><strong>Start time: </strong><%= @catchupevent.start_time.strftime('%I:%M %p')%></p>
             <p><strong>Duration: </strong><%= @catchupevent.duration %> Hours</p>
         </div>

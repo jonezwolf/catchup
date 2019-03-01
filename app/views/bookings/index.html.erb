@@ -24,8 +24,11 @@
             <% @duration = (@catchupevent.end_time.to_i - @catchupevent.start_time.to_i) / 3600  %>
             <p><strong>Duration: </strong><%= @duration %> Hours</p>
         </div>
+        <div class="card-photo">
+          <%= cl_image_tag(@catchupevent.photo, crop: :fill) %>
+        </div>
         <div class="card-btn">
-          <%= link_to "GET DETAILS", catchupevent_path(@catchupevent), class: "btn btn-green btn-lg btn-block" %>
+          <%= link_to "GET DETAILS", catchupevent_path(@catchupevent), class: "btn btn-green" %>
         </div>
       </div>
     <% end %>

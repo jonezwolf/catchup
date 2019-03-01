@@ -33,8 +33,50 @@ ux_design = Catchupevent.create!(
   end_time: DateTime.new(2019,3,1,20,0,0),
   capacity: 50,
   category: 'design',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309805/xpu2bi5mcd0huvhosrj5.jpg',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551414217/uxdesign.jpg',
   description: "Many of our members are looking to move into UX from all sorts of different professions. In this session we will hear stories from about journeys into (or towards) a career in UX. If you would like to share your story, or know anyone else that might, please send the organiser a message."
+  )
+
+puts "Created catchup #{Catchupevent.all.length}"
+
+spiritual_mind = Catchupevent.create!(
+  user: jonas,
+  name: 'SpiritualMind',
+  location: '41 Stewart Street Richmond Melbourne',
+  start_time: DateTime.new(2019,2,28,16,0,0),
+  end_time: DateTime.new(2019,2,28,19,0,0),
+  capacity: 40,
+  category: 'meditation',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551413007/spiritual_mind.jpg',
+  description: 'This is a group for anyone interested in the PRACTICAL APPLICATIONS of various Mind, Body and Spirit topics. I believe we are all on a journey of personal and spiritual growth in all areas of our lives, and this group caters for people who would like to evolve in the areas of mind, body and spirit.'
+  )
+
+puts "Created catchup #{Catchupevent.all.length}"
+
+go_entrepreneurs = Catchupevent.create!(
+  user: jonas,
+  name: 'GoEntrepreneurs',
+  location: 'CBD Melbourne',
+  start_time: DateTime.new(2019,2,28,17,0,0),
+  end_time: DateTime.new(2019,2,28,19,0,0),
+  capacity: 40,
+  category: 'entrepreneurship',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551415219/work.jpg',
+  description: 'For people working in startups, lean (startup) coffee is a weekly 1-hour coffee that runs a mash-up of leancoffee.org with theleanstartup.com.'
+  )
+
+puts "Created catchup #{Catchupevent.all.length}"
+
+manage_daily = Catchupevent.create!(
+  user: jonas,
+  name: 'ManageDaily',
+  location: 'CBD Melbourne',
+  start_time: DateTime.new(2019,3,1,18,0,0),
+  end_time: DateTime.new(2019,3,1,20,0,0),
+  capacity: 40,
+  category: 'business',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551413020/manage_daily.jpg',
+  description: "This is Melbourne's longest running and largest group of its type. Come to our meetings and develop your understanding of Management."
   )
 
 puts "Created catchup #{Catchupevent.all.length}"
@@ -49,49 +91,6 @@ think_big = Catchupevent.create!(
   category: 'business',
   photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309875/tofx3qxgluyrjfhzf0di.png',
   description: 'Thinking Big is a supportive group consisting of very driven and successful individuals who like to Think Big.'
-
-  )
-
-puts "Created catchup #{Catchupevent.all.length}"
-
-go_entrepreneurs = Catchupevent.create!(
-  user: jonas,
-  name: 'GoEntrepreneurs',
-  location: 'CBD Melbourne',
-  start_time: DateTime.new(2019,2,28,17,0,0),
-  end_time: DateTime.new(2019,2,28,19,0,0),
-  capacity: 40,
-  category: 'entrepreneurship',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309393/bldz43z6lf1mwjoev2sm.jpg',
-  description: 'For people working in startups, lean (startup) coffee is a weekly 1-hour coffee that runs a mash-up of leancoffee.org with theleanstartup.com.'
-  )
-
-puts "Created catchup #{Catchupevent.all.length}"
-
-manage_daily = Catchupevent.create!(
-  user: jonas,
-  name: 'ManageDaily',
-  location: 'CBD Melbourne',
-  start_time: DateTime.new(2019,3,1,18,0,0),
-  end_time: DateTime.new(2019,3,1,20,0,0),
-  capacity: 40,
-  category: 'business',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551397927/bmyqxjif3tk6anmnx573.jpg',
-  description: "This is Melbourne's longest running and largest group of its type. Come to our meetings and develop your understanding of Management."
-  )
-
-puts "Created catchup #{Catchupevent.all.length}"
-
-spiritual_mind = Catchupevent.create!(
-  user: jonas,
-  name: 'SpiritualMind',
-  location: '41 Stewart Street Richmond Melbourne',
-  start_time: DateTime.new(2019,2,28,16,0,0),
-  end_time: DateTime.new(2019,2,28,19,0,0),
-  capacity: 40,
-  category: 'meditation',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551309729/qla9umh0vgccnhwj1pjr.jpg',
-  description: 'This is a group for anyone interested in the PRACTICAL APPLICATIONS of various Mind, Body and Spirit topics. I believe we are all on a journey of personal and spiritual growth in all areas of our lives, and this group caters for people who would like to evolve in the areas of mind, body and spirit.'
   )
 
 puts "Created catchup #{Catchupevent.all.length}"
@@ -104,8 +103,8 @@ virtual_master = Catchupevent.create!(
   end_time: DateTime.new(2019,3,16,21,0,0),
   capacity: 30,
   category: 'technology',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401223/VR.jpg',
-  description: 'Augmented Reality is poised to innovate the way people engage with businesses, products, and entertainment. Leading innovators in the technology, like Magic Leap, Google, Microsoft and Apple, have set the precedent for the future of AR through investments and strategic moves. Imagine the world that we live in with all the information delivered to you visually, how you want it, the way you want it when you want it. In our one – day Launch into AR Bootcamp, you’ll learn the foundation of Augmented Reality Design and be able to build your very own AR prototype. You’ll learn how augmented reality systems, in conjunction with their areas of application, form a new foundation for design opportunities.'
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551413022/virtual_master.jpg',
+  description: 'Augmented Reality is poised to innovate the way people engage with businesses, products, and entertainment. Leading innovators in the technology, like Magic Leap, Google, Microsoft and Apple, have set the precedent for the future of AR through investments and strategic moves. Imagine the world that we live in with all the information delivered to you visually, how you want it, the way you want it when you want it. In our one – day Launch into AR Bootcamp, you’ll learn the foundation of Augmented Reality Design and be able to build your very own AR prototype.'
   )
 
 puts "Created catchup #{Catchupevent.all.length}"
@@ -147,21 +146,21 @@ coding_workshop = Catchupevent.create!(
   capacity: 15,
   category: 'technology',
   photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401222/Advanced_Coding_Workshop.jpg',
-  description: 'You have heard of coding, but it looks kind of complex, and you do not know where to begin. Or perhaps you have been game enough to try, you have downloaded an editor, wrote a few lines, but you are a bit confused. Maybe you are already well on your way, and just want to spend time in a happy community of developers (and want to share your passionate distaste of Internet explorer). Whatever your level, this is the place for you... We run this meetup almost every week at General Assembly in Melbourne. Bring your laptop, a coffee, and come code in a relaxed and open setting with other developers. For those just starting out, there are mentors who will guide you from the very beginning, and train you each week to become a better web developer. For the more advanced, this is a great opportunity for you to learn more about new and upcoming technologies, contribute by helping and mentoring, or have your question about that weird bug answered.'
+  description: 'You have heard of coding, but it looks kind of complex, and you do not know where to begin. Or perhaps you have been game enough to try, you have downloaded an editor, wrote a few lines, but you are a bit confused. Maybe you are already well on your way, and just want to spend time in a happy community of developers (and want to share your passionate distaste of Internet explorer). Whatever your level, this is the place for you...'
   )
 
 puts "Created catchup #{Catchupevent.all.length}"
 
-learn_code = Catchupevent.create!(
+wakeboard = Catchupevent.create!(
   user: jonas,
-  name: 'Learn to code',
-  location: 'Federation Square Melbourne',
-  start_time: DateTime.new(2019,3,20,10,0,0),
-  end_time: DateTime.new(2019,3,20,15,0,0),
-  capacity: 10,
-  category: 'technology',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401222/Learn_to_code.jpg',
-  description: 'In this focus group workshop you can learn to write your first HTML and design cool websites with us. Take your first step towards coding now with us. It is really simple. We love to teach!'
+  name: 'Wakeboarding basics',
+  location: 'Melbourne Australia',
+  start_time: DateTime.new(2019,3,05,10,0,0),
+  end_time: DateTime.new(2019,3,05,14,0,0),
+  capacity: 15,
+  category: 'sports',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401223/Wakeboarding_basics.jpg',
+  description: 'Wakeboarding is a towed surface water sport or leisure activity where a participant is towed on a small board behind a motorboat over a body of water. The participant rides wake produced by the towing boat, and attempts to do tricks.'
   )
 
 puts "Created catchup #{Catchupevent.all.length}"
@@ -175,7 +174,7 @@ fix_things = Catchupevent.create!(
   capacity: 50,
   category: 'technology',
   photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401222/How_to_fix_things.jpg',
-  description: 'We are going to show you how to use tools to fix things. Have oyu ever wondered how not to pay a technician to fix stuff at home? Come to our meetup and take the first step towards independence at home!'
+  description: 'We are going to show you how to use tools to fix things. Have you ever wondered how not to pay a technician to fix stuff at home? Come to our meetup and take the first step towards independence at home!'
   )
 
 puts "Created catchup #{Catchupevent.all.length}"
@@ -202,7 +201,7 @@ bulli_love = Catchupevent.create!(
   end_time: DateTime.new(2019,3,5,19,0,0),
   capacity: 500,
   category: 'music',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401222/Spread_the_love.jpg',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551413293/spread_love.jpg',
   description: 'Join us for the first Spread the love of the winter season. As every year, the entry is free. We have rented a big boat to go down Yarra River and are willing to put in everything to throw a crazy party that you and your friends will never ever forget!'
   )
 
@@ -216,7 +215,7 @@ dance_festival = Catchupevent.create!(
   end_time: DateTime.new(2019,3,31,19,0,0),
   capacity: 150,
   category: 'music',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401223/Sunny_basses.jpg',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551414338/dj.jpg',
   description: 'It is the end of summer. Let us invite one last time to our dance party and celebrate a last Picnic Electronic together in the botanical gardens. You can be escited for a special international DJ guest to join our party. It will be awesome. The price is only 20$, 35$ if you buy two tickets. We love you.'
   )
 
@@ -230,7 +229,7 @@ craft_festival = Catchupevent.create!(
   end_time: DateTime.new(2019,3,05,14,0,0),
   capacity: 150,
   category: 'music',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401222/Craftsmanship_Festival.jpg',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551413463/craftmenship.jpg',
   description: 'Come together to have a good time and find out about the latest trends in craftsmanship on this festival. We are here to show you the real deal. You can be a strong person. Just feel free to join our community on this beautiful day and challenge yourself to widen your horizon towards the unexpected.'
   )
 
@@ -286,22 +285,22 @@ women = Catchupevent.create!(
   end_time: DateTime.new(2019,3,10,14,0,0),
   capacity: 25,
   category: 'technology',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401223/Women_in_Tech.jpg',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551413597/women_tech.jpg',
   description: 'Join us for a special Google Cloud Melbourne meetup to celebrate International Womens Day 2019! Doors open for drinks at 17:30, and talks will kickoff at 18:00. There will also be pizza, and when the talks finish up there will be more time for drinks and networking. Look forward to seeing you then.'
   )
 
 puts "Created catchup #{Catchupevent.all.length}"
 
-wakeboard = Catchupevent.create!(
+learn_code = Catchupevent.create!(
   user: jonas,
-  name: 'Wakeboarding basics',
-  location: 'Melbourne Australia',
-  start_time: DateTime.new(2019,3,05,10,0,0),
-  end_time: DateTime.new(2019,3,05,14,0,0),
-  capacity: 15,
-  category: 'sports',
-  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401223/Wakeboarding_basics.jpg',
-  description: 'Wakeboarding is a towed surface water sport or leisure activity where a participant is towed on a small board behind a motorboat over a body of water. The participant rides wake produced by the towing boat, and attempts to do tricks.'
+  name: 'Learn to code',
+  location: 'Federation Square Melbourne',
+  start_time: DateTime.new(2019,3,20,10,0,0),
+  end_time: DateTime.new(2019,3,20,15,0,0),
+  capacity: 10,
+  category: 'technology',
+  photo: 'https://res.cloudinary.com/giugoe/image/upload/v1551401222/Learn_to_code.jpg',
+  description: 'In this focus group workshop you can learn to write your first HTML and design cool websites with us. Take your first step towards coding now with us. It is really simple. We love to teach!'
   )
 
 puts "Created #{Catchupevent.all.length} catchups!"

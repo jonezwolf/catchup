@@ -18,15 +18,16 @@
     <div id="row2">
       <%= image_tag @catchupevent.photo %>
     </div>
-  </div>
-
-  <div id="div-3">
+     <div id="div-3">
     <% if @boolean == true %>
       <%= link_to "BOOKING HAS ALREADY BEEN MADE! - VIEW MY BOOKINGS", my_bookings_path, :class => 'btn btn-red btn-lg btn-block' %>
     <% else %>
-      <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), :class => 'btn btn-green btn-lg btn-block' %>
+      <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), :class => 'btn btn-green ' %>
     <% end %>
+    </div>
   </div>
+
+  <hr size="100">
 
   <div id="div-4" >
   <!-- <div class="container"> -->

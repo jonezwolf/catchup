@@ -1,15 +1,15 @@
+// My Booking card
 .card-booking {
   overflow: hidden;
-  height: 170px;
+  height: 200px;
   background: white;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin: 5px 0px;
+  margin: 10px 0px;
   position: relative;
   border-radius: 5px;
 }
-
 .card-booking:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -20,17 +20,14 @@
   position: absolute;
   right: 0px;
 }
-
 .card-booking h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
-
 .card-booking h4 {
   color: $green;
 }
-
 .card-booking p {
   font-size: 12px;
   line-height: 1.4;
@@ -38,31 +35,26 @@
   margin-bottom: 0;
   margin-top: 8px;
 }
-
 .card-booking-infos {
   padding: 20px;
   position: absolute;
-  top: 0px;
+  top: 10px;
   left: 0px;
   text-align: left;
 }
-
 .card-btn {
   position: absolute;
   bottom: 10px;
   width: 100%;
 }
-
 .card-header {
   position: absolute;
   width: 100%;
   top: 0px;
 }
-
 .card-header p {
-  margin-top: 0px;
+  margin-top: 5px;
 }
-
 .card-header h4 {
   margin-bottom: 0px;
   margin-top: 0px;
@@ -71,11 +63,10 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 250px;
+  width: 200px;
   height: 100%;
-  // padding: 20px 20px;
 }
-
+// Sign In card
 .card-signin {
   overflow: hidden;
   height: 100%;
@@ -95,4 +86,7 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 1.3333;
+}
+.form-check-label {
+  padding-left: 5px;
 }

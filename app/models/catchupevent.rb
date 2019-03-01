@@ -6,7 +6,7 @@ class Catchupevent < ApplicationRecord
   validates :location, presence: true
   validates :start_time, presence: true
   validates :end_time, presence: true
-  validates :capacity, presence: true, inclusion: { in: (1..50), allow_nil: false }
+  validates :capacity, presence: true, inclusion: { in: (1..500), allow_nil: false }
   validates :category, presence: true
 
   geocoded_by :location

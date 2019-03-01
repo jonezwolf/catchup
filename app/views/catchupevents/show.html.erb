@@ -20,7 +20,7 @@
     </div>
      <div id="div-3">
     <% if @boolean == true %>
-      <%= link_to "BOOKING HAS BEEN MADE! SEE MY BOOKINGS", my_bookings_path, :class => 'btn btn-red' %>
+      <%= link_to "BOOKING HAS BEEN MADE! SEE MYBOOKINGS", my_bookings_path, :class => 'btn btn-red' %>
     <% else %>
       <%= link_to "BOOK NOW", new_catchupevent_booking_path(@catchupevent), :class => 'btn btn-green book_button ' %>
     <% end %>

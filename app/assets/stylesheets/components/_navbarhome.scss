@@ -1,0 +1,38 @@
+.navbar-home {
+  transition: all 0.3s ease;
+  height: 70px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  // top: 0;
+  width: 100%;
+  z-index: 999;
+  position: relative;
+  background: transparent;
+}
+
+
+.navbar-wagon-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signup-home {
+  position: absolute;
+  right: 20px;
+  font-weight: bold;
+  font-size: 17px;
+  color: white;
+}
+
+.signin-home {
+  position: absolute;
+  right: 120px;
+  font-weight: bold;
+  font-size: 17px;
+  color: white;
+
+}

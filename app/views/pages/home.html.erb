@@ -1,11 +1,17 @@
-<div class="background_home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'https://images.unsplash.com/photo-1493970761637-dea31d1555ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80' %>');">
+<div class="background_home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://res.cloudinary.com/giugoe/image/upload/v1551405593/ben-duchac-66002-unsplash.jpg');">
   <div class="container" style="text-align: center">
+    <br>
     <div style="margin-top: 150px">
-     <%= image_tag "Logo_no_white_background.png", height: 100 %>
+     <%= image_tag "Catchup_Writing.png", height: 50 %>
     </div>
+    <br>
+    <br>
+    <p>
+      <span id="banner-typed-text", class="typed"></span>
+    </p>
 
-    <div style="margin-top: 150px">
-    <%= link_to "DISCOVER ALL CATCHUPS!", catchupevents_path, :class => 'btn btn-green', :width => '1000 px' %>
+    <div style="margin-top: 100px">
+    <%= link_to "DISCOVER ALL CATCHUPS!", catchupevents_path, :class => 'btn btn-red home' %>
     </div>
   </div>
 

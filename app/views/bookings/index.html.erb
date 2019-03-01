@@ -30,7 +30,7 @@
         </div>
         <div class="card-btn">
           <%= link_to "GET DETAILS", catchupevent_path(@catchupevent), class: "btn btn-green" %>
-          <%= link_to "DESTROY", catchupevent_booking_path(booking.catchupevent_id, booking), method: :delete, data: { confirm: "Are you sure?!" }, class: "btn btn-red" %>
+          <%= link_to "CANCEL BOOKING", catchupevent_booking_path(booking.catchupevent_id, booking), method: :delete, data: { confirm: "Are you sure?!" }, class: "btn btn-red" %>
         </div>
       </div>
     <% end %>

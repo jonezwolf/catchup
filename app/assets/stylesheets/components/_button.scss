@@ -7,20 +7,20 @@
 }
 
 .btn-green {
-  background: #1EDD88;
+  background: $green;
 }
 
 .btn-green:hover {
-  background: #1BCB7F;
+  background: #8fd461;
   color: white;
 }
 
 .btn-red {
-  background: #EE5F5B;
+  background: $red;
 }
 
 .btn-red:hover {
-  background: #E05C55;
+  background: #8c221f;
   color: white
 }
 

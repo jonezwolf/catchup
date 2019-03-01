@@ -1,35 +1,36 @@
 <% flash.each do |message_type, message| %>
-  <div class="alert alert-<%= message_type %>">
+  <div cass="alert alert-<%= message_type %>">
     <%= message %>
   </div>
 <% end %>
-<div class="container" style="text-align: center;width:  700px;padding: 50px 100px;">
-  <div>
-    <h1>Make a booking for</h1>
-    <h1><u><%= @catchupevent.name %></u></h1>
+
+<div class="container">
+  <div class = "card" style= "text-align: center;">
+    <div>
+      <li class="a-breadcrumb-divider" style= "list-style-type: none">
+        <span> < </span> <span class= "a-color-tertiary"> <%= link_to "Back to #{@catchupevent.name.upcase}", catchupevent_path(@catchupevent), class: "link"%> </span>
+      </li>
+    </div>
+    <h1 style= "padding-top: 30px;">Booking for <%= @catchupevent.name %></h1>
+    <p> Currently booked: <% if @total_guests == nil %>
+      <%= '0' %>
+      <% else %>
+      <%= @total_guests %>
+      <% end %>/ <%= @catchupevent.capacity %>
+    </p>
+    <hr size="100">
     <!-- <h2>Test</h2>
     <%= user_signed_in? %>
     <%= current_user.id %> -->
     <div style="padding-top: 25px">
+
       <div style="padding-bottom: 25px">
-        <p> Currently booked: <% if @total_guests == nil %>
-          <%= '0' %>
-          <% else %>
-          <%= @total_guests %>
-          <% end %>/ <%= @catchupevent.capacity %></p>
-
         <%= simple_form_for [@catchupevent, @booking] do |f| %>
-          <%= f.input :number_of_guests, label: 'How many tickets would you like to book? :-)', collection: [1, 2, 3, 4, 5] %>
-
-            <%= f.button :submit, 'CREATE BOOKING!', class: "btn btn-green" %>
-
+          <%= f.input :number_of_guests, label: 'How many tickets would you like to book?', collection: [1, 2, 3, 4, 5] %>
+          <%= f.button :submit, 'CREATE BOOKING!', class: "btn btn-green" %>
         <% end %>
       </div>
-
     </div>
-
   </div>
 </div>
-<div style="margin-left: 50px">
-<%= link_to "GO BACK TO #{@catchupevent.name.upcase}", catchupevent_path(@catchupevent), :class => 'btn btn-blue' %>
-</div>
+

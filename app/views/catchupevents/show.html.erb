@@ -6,22 +6,18 @@
     </div>
 
   <div id="div-2">
-    <table>
-      <tr>
-        <th id="row1">
-          <p><strong>Category:</strong> #<%=@catchupevent.category %></p>
-          <p><strong>Location:</strong> <%=@catchupevent.location %></p>
-          <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
-          <% @end = @catchupevent.end_time.strftime('%H:%M') %>
-          <p><strong>Time:</strong> <%=@start%> (<%= @duration %>h)</p>
-          <p><strong>Currently booked:</strong> <%= @total_guests %>
-            / <%= @catchupevent.capacity %></p>
-        </th>
-        <th id="row2">
-          <%= image_tag @catchupevent.photo %>
-        </th>
-      </tr>
-    </table>
+    <div id="row1">
+      <p><strong>Category:</strong> #<%=@catchupevent.category %></p>
+      <p><strong>Location:</strong> <%=@catchupevent.location %></p>
+      <% @start = @catchupevent.start_time.strftime('%a, %d %b %Y %H:%M') %>
+      <% @end = @catchupevent.end_time.strftime('%H:%M') %>
+      <p><strong>Time:</strong> <%=@start%> (<%= @duration %>h)</p>
+      <p><strong>Currently booked:</strong> <%= @total_guests %>
+        / <%= @catchupevent.capacity %></p>
+    </div>
+    <div id="row2">
+      <%= image_tag @catchupevent.photo %>
+    </div>
   </div>
 
   <div id="div-3">

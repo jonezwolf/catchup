@@ -20,7 +20,7 @@ class BookingPolicy < ApplicationPolicy
     user_is_owner
   end
 
-  def destroy
+  def destroy?
     user_is_owner
   end
 

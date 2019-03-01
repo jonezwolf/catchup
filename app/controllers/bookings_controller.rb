@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_catchupevent, only: [ :new, :create ]
+  before_action :set_catchupevent, only: [ :new, :create, :destroy ]
 
   def index
     @bookings = policy_scope(Booking)
@@ -33,6 +33,15 @@ class BookingsController < ApplicationController
     redirect_to my_bookings_path, notice: "Congrats - you've booked #{booking.number_of_guests} slots for #{@catchupevent.name} :-)" if booking.save
   end
 
+  def destroy
+    booking = Booking.find(params[:id])
+    authorize booking
+    booking.destroy
+    redirect_to my_bookings_path, alert: "You've deleted your booking for #{booking.catchupevent.name}."
+  end
+
+  # Other methods
+
   def count_bookings
     number_of_bookings = @catchupevent.bookings.map do |booking|
       booking.number_of_guests
@@ -40,6 +49,8 @@ class BookingsController < ApplicationController
     @total_guests = number_of_bookings.reduce(:+)
     return @total_guests
   end
+
+  # Private Methods
 
   private
 

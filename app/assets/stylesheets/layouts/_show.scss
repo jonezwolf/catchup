@@ -79,7 +79,7 @@
 }
 
 #div-3 {
-  width: 100%;
+  // width: 100%;
   margin-top: 20px;
   padding: 0px;
   text-align: center;
@@ -93,8 +93,13 @@
   // bottom: 100px;
 
   top: 50px;
-  right:310px;
+  right:370px;
   // right: 300px;
+}
+
+.book_button {
+  position: absolute;
+  right: 280px;
 }
 
 #thick-button {
